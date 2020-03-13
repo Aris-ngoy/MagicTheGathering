@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Magic The Gathering</string>
+    <string name="cardimage">cardImage</string>
+    <string name="def">Default</string>
+    <string name="booster">booster</string>
+    <string name="detailImageText">Detail Image</string>
+</resources>
