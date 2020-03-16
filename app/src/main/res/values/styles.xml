@@ -1,31 +1,41 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
+
+        <item name="actionOverflowMenuStyle">@style/MyPopup</item>
+        <item name="android:actionMenuTextColor">@color/colorPrimary</item>
     </style>
 
-    <style name="AppThemeNoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="AppThemeNoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
-        <item name="popupMenuStyle">@style/Widget.MaterialComponents.PopupMenu</item>
-        <item name="android:contextPopupMenuStyle" tools:targetApi="n">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
-        <item name="actionOverflowMenuStyle">@style/Widget.MaterialComponents.PopupMenu.Overflow</item>
         <item name="android:textColor">#FFF</item>
+        <item name="actionOverflowMenuStyle">@style/MyPopup</item>
+        <item name="android:actionMenuTextColor">@color/colorPrimary</item>
+
     </style>
 
-    <style name="ThemeToolbar" parent="Theme.AppCompat.Light">
+    <style name="ThemeToolbar" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- navigation icon color -->
         <item name="colorControlNormal">#FFF</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <!-- color of the menu overflow icon -->
-        <item name="android:textColorSecondary">#FFF</item>
+        <item name="android:textColorSecondary">@color/colorPrimary</item>
         <item name="actionMenuTextColor">#FFF</item>
+        <item name="android:popupBackground">@color/colorPrimary</item>
+    </style>
+
+    <!-- Popup Menu -->
+    <style name="MyPopup" parent="@style/Widget.MaterialComponents.PopupMenu">
+        <item name="android:popupBackground">@color/colorPrimary</item>
     </style>
 </resources>

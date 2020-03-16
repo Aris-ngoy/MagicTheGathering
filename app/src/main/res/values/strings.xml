@@ -4,4 +4,7 @@
     <string name="def">Default</string>
     <string name="booster">booster</string>
     <string name="detailImageText">Detail Image</string>
+    <string name="colortext">colorText</string>
+    <string name="power">Power</string>
+    <string name="toughness">Toughness</string>
 </resources>

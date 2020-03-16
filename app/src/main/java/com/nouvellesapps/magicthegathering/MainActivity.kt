@@ -3,6 +3,7 @@ package com.nouvellesapps.magicthegathering
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.VisibleForTesting
 import androidx.recyclerview.widget.GridLayoutManager
 import com.nouvellesapps.magicthegathering.Adapters.SetListAdapter
 import io.magicthegathering.kotlinsdk.api.MtgSetApiClient
@@ -11,8 +12,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 import retrofit2.Response
 import java.lang.Exception
+import kotlin.coroutines.CoroutineContext
 
-class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
+class MainActivity(coroutineContext: CoroutineContext) : AppCompatActivity(), CoroutineScope by MainScope() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +28,6 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
 
 
     }
-
     private suspend fun callOnMainThread() {
         CardLoadingBar.visibility = View.VISIBLE
         try {

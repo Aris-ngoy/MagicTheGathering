@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
     tools:context=".DetailActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -47,33 +48,84 @@
                 android:id="@+id/DetailText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-black"
                 android:includeFontPadding="true"
                 android:text="@string/detailImageText"
                 android:textSize="24sp"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/DetailTextArtist"
-                android:includeFontPadding="true"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:includeFontPadding="true" />
 
             <TextView
                 android:id="@+id/DetailTextContent"
-                android:includeFontPadding="true"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:includeFontPadding="true" />
 
+            <TextView
+                android:id="@+id/colorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:text="@string/colortext"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/powerText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:includeFontPadding="true"
+                android:text="@string/power" />
+
+            <SeekBar
+                android:id="@+id/powerSeeBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="10"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/toughnessText"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/toughness" />
+
+            <SeekBar
+                android:id="@+id/toughnessSeekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="10"
+                android:progress="3" />
+            <TextView
+                android:id="@+id/creation"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/toughness" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

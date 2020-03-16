@@ -93,6 +93,9 @@ class CardListActivity : AppCompatActivity(), CoroutineScope by MainScope() {
         try {
             val result = getBoosters(SetModel.code)
             boosterSetCardList = result as MutableList<MtgCard>
+            if(result.size == 0)
+                MyApplication.showMessage(this,"No Result Found ...")
+            else
             withContext(Dispatchers.Main) {
                 updateListViewData(boosterSetCardList)
             }
@@ -117,7 +120,9 @@ class CardListActivity : AppCompatActivity(), CoroutineScope by MainScope() {
         try {
             val result = getAllSets(SetModel.code)
             defaultSetCardList = result as MutableList<MtgCard>;
-
+            if(result.size == 0)
+                MyApplication.showMessage(this,"No Result Found ...")
+            else
             withContext(Dispatchers.Main) {
                 updateListViewData(result)
             }
